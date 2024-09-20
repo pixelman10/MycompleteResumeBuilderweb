@@ -1,0 +1,358 @@
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #0D1117; /* Darker muted blue-black */
+    color: #F0F6FC; /* Off-white for text */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes buttonPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* THis is my Main container */
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+/* Navigation menu of my resume */
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color:  #21262D; /* Darker background for navigation */
+    color: #F0F6FC;
+    height: 50px; 
+    animation: fadeIn 1s ease-in-out 0.2s;
+}
+
+.nav-menu img {
+    height: 50px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.nav-menu .img-logo {
+    display: none;
+}
+
+.nav-menu a {
+    color: #F0F6FC;
+    background-color: #58A6FF; 
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    transition: all 0.4s ease-in;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    animation: fadeIn 1.4s ease-in-out;
+}
+
+.nav-menu a:hover {
+    background-color: #1F6FEB; 
+    transform: translateY(-2px); 
+}
+
+/* Main content here */
+.content {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+    animation: fadeIn 1.6s ease-in-out;
+}
+
+.left {
+    flex: 1;
+    padding: 20px;
+}
+
+.left h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #58A6FF; 
+}
+
+.left h1 span {
+    color: #A5D6FF; 
+    font-weight: bold;
+}
+
+.left p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1.8s ease-in-out;
+}
+
+#buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#buttons .btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #238636; 
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 128, 0, 0.4), 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+#buttons .btn:hover {
+    background-color: #2EA043; 
+    animation: buttonPulse 0.6s infinite; 
+    box-shadow: 0 8px 20px rgba(0, 128, 0, 0.6), 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Right Section of my web  */
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    animation: fadeIn 2.2s ease-in-out;
+}
+
+.right img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10%; 
+    transition: transform 0.4s ease;
+    animation: fadeIn 2.2s ease-in-out;
+}
+
+.right img:hover {
+    transform: scale(1.05); 
+}
+
+/* Card Section */
+.cards-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: #161B22; 
+    color: #F0F6FC;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    animation: fadeIn 2.4s ease-in-out;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #A5D6FF; 
+}
+
+.card ul {
+    list-style-type: none;
+}
+
+.card ul li h4,
+.card ul li h3 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    color: #58A6FF; 
+}
+
+/* Form Container of my website */
+.form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #161B22; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+    border-radius: 10px;
+    animation: fadeIn 2.6s ease-in-out;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #F0F6FC;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #F0F6FC;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #21262D; 
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #21262D; 
+    color: #F0F6FC;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Submit Button of my web */
+.btn.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #238636; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn.submit-btn:hover {
+    background-color: #2EA043; 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* Add shadow to cards in the cards section (like about me, skills, etc.). */
+.card {
+    background-color: #161B22; 
+    color: #F0F6FC;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Box shadow */
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+    animation: fadeIn 2.4s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Larger shadow on hover */
+}
+
+/* Footer ka section  */
+footer {
+    background-color: #21262D;
+    color: #F0F6FC;
+    text-align: center;
+    padding: 6px ;
+    margin-top: auto;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.5);
+    
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links li a {
+    color: #58A6FF; 
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-links li a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries hai/for   responsiveness in code  */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .right img {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .left h1 {
+        font-size: 2rem;
+    }
+
+    .cards-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .right img {
+        width: 70%;
+        max-width: 250px;
+    }
+
+    .left h1 {
+        font-size: 1.7rem;
+    }
+
+    .left p {
+        font-size: 1rem;
+    }
+
+    #buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Dynamic Resume</h1><br><br>
+        <div class="form-container">
+            <h2>Enter Your Details</h2>
+            <form id="resumeForm"><br>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" required>
+                
+                <label for="skills">Skills:</label>
+                <textarea id="skills" rows="4"required></textarea>
+                
+                <label for="experience">Experience:</label>
+                <textarea id="experience" rows="4" required></textarea>
+                
+                <label for="education">Education:</label>
+                <textarea id="education" rows="4" required></textarea>
+                
+                <label for="summary">Summary:</label>
+                <textarea id="summary" rows="4" required></textarea>
+              
+                <label for="hobbies">Hobbies:</label>
+                <textarea id="hobbies" rows="4" required></textarea>
+                
+                <button type="button" id="generate">Generate Resume</button>
+            </form>
+        </div>
+
+        <!--Edit button for all resume parts-->
+        <div id="resumeContainer" class="resume-container">
+            <h2>Generated Resume</h2>
+            <div class="resume-content">
+                <div id="outputNameContainer">
+                    <p id="outputName"></p>
+                    <button class="edit-btn" data-edit="outputName">Edit</button>
+                </div>
+                <div id="outputEmailContainer">
+                    <p id="outputEmail"></p>
+                    <button class="edit-btn" data-edit="outputEmail">Edit</button>
+                </div>
+                <div id="outputPhoneContainer">
+                    <p id="outputPhone"></p>
+                    <button class="edit-btn" data-edit="outputPhone">Edit</button>
+                </div>
+                <div id="outputSkillsContainer">
+                    <p id="outputSkills"></p>
+                    <button class="edit-btn" data-edit="outputSkills">Edit</button>
+                </div>
+                <div id="outputExperienceContainer">
+                    <p id="outputExperience"></p>
+                    <button class="edit-btn" data-edit="outputExperience">Edit</button>
+                </div>
+                <div id="outputEducationContainer">
+                    <p id="outputEducation"></p>
+                    <button class="edit-btn" data-edit="outputEducation">Edit</button>
+                </div>
+                <div id="outputSummaryContainer">
+                    <p id="outputSummary"></p>
+                    <button class="edit-btn" data-edit="outputSummary">Edit</button>
+                </div>
+                <div id="outputHobbiesContainer">
+                    <p id="outputHobbies"></p>
+                    <button class="edit-btn" data-edit="outputHobbies">Edit</button>
+                </div>
+            </div>
+
+         <!-- buttons for link generation and PDF print -->
+         <button id="generateLink">Generate Link</button>
+         <button id="printPDF">Print as PDF</button>
+         <br /><br />
+ 
+         <!-- Area to display the generated link -->
+         <a
+           id="generatedLink"
+           style="word-break: break-all"
+           href="#resumeContainer"
+         ></a>
+         <br />
+         <button id="copyLink" style="display: none; margin-top: 10px">
+           Copy Link
+         </button>
+
+        </div>
+    </div>
+    <script src="script1.js"></script>
+</body>
+</html>
