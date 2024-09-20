@@ -140,21 +140,3 @@ function saveField(field, input, button) {
     document.body.innerHTML = originalContent;
     buttons.forEach(button => button.style.display = "inline-block");
 });
-(_d = document.getElementById("generateLink")) === null || _d === void 0 ? void 0 : _d.addEventListener("click", function () {
-    const name = document.getElementById("outputName").textContent;
-    const email = document.getElementById("outputEmail").textContent;
-    const phone = document.getElementById("outputPhone").textContent;
-    const skills = document.getElementById("outputSkills").textContent;
-    const experience = document.getElementById("outputExperience").textContent;
-    const education = document.getElementById("outputEducation").textContent;
-    const summary = document.getElementById("outputSummary").textContent;
-    // Create a URL with query parameters
-    const baseUrl = window.location.origin + '/resumePreview.html';
-    const link = `${baseUrl}?name=${encodeURIComponent(name !== null && name !== void 0 ? name : '')}&email=${encodeURIComponent(email !== null && email !== void 0 ? email : '')}&phone=${encodeURIComponent(phone !== null && phone !== void 0 ? phone : '')}&skills=${encodeURIComponent(skills !== null && skills !== void 0 ? skills : '')}&experience=${encodeURIComponent(experience !== null && experience !== void 0 ? experience : '')}&education=${encodeURIComponent(education !== null && education !== void 0 ? education : '')}&summary=${encodeURIComponent(summary !== null && summary !== void 0 ? summary : '')}`;
-    // Display the generated link
-    const generatedLinkElement = document.getElementById("generatedLink");
-    generatedLinkElement.textContent = link;
-    // Show the "Copy Link" button after generating the link
-    const copyLinkButton = document.getElementById("copyLink");
-    copyLinkButton.style.display = "inline-block"; // Make the button visible
-});
