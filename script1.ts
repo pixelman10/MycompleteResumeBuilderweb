@@ -157,24 +157,3 @@ document.getElementById("printPDF")?.addEventListener("click", function () {
     buttons.forEach(button => button.style.display = "inline-block");
 });
 
-document.getElementById("generateLink")?.addEventListener("click", function () {
-    const name = (document.getElementById("outputName") as HTMLElement).textContent;
-    const email = (document.getElementById("outputEmail") as HTMLElement).textContent;
-    const phone = (document.getElementById("outputPhone") as HTMLElement).textContent;
-    const skills = (document.getElementById("outputSkills") as HTMLElement).textContent;
-    const experience = (document.getElementById("outputExperience") as HTMLElement).textContent;
-    const education = (document.getElementById("outputEducation") as HTMLElement).textContent;
-    const summary = (document.getElementById("outputSummary") as HTMLElement).textContent;
-  
-    // Create a URL with query parameters
-    const baseUrl = window.location.origin + '/resumePreview.html';
-    const link = `${baseUrl}?name=${encodeURIComponent(name ?? '')}&email=${encodeURIComponent(email ?? '')}&phone=${encodeURIComponent(phone ?? '')}&skills=${encodeURIComponent(skills ?? '')}&experience=${encodeURIComponent(experience ?? '')}&education=${encodeURIComponent(education ?? '')}&summary=${encodeURIComponent(summary ?? '')}`;
-  
-    // Display the generated link
-    const generatedLinkElement = document.getElementById("generatedLink") as HTMLElement;
-    generatedLinkElement.textContent = link;
-  
-    // Show the "Copy Link" button after generating the link
-    const copyLinkButton = document.getElementById("copyLink") as HTMLButtonElement;
-    copyLinkButton.style.display = "inline-block";  // Make the button visible
-});
